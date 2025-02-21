@@ -1,6 +1,6 @@
 package com.ticketerra.backend.ticketerra_api_service.modelos;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,127 +11,175 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "usuarios")
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Usuario {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_usuario")
-	private Long idUsuario;
-	private String nombreCompleto;
-	private String correo;
-	private String telefono;
-	private String codigoPostal;
-	private String contrasena;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@Column(name = "token_recuperacion")
-	private String tokenRecuperacion;
+    @Column(unique = true, nullable = false)
+    private String correo;
 
-	@Column(name = "token_expiracion")
-	private long tokenExpiracion;
+    @Column(nullable = false)
+    private String nombreCompleto;
 
-	@Column(name = "activo")
-	private Boolean activo;
+    @Column(nullable = false)
+    private String contrasena;
 
-	@Column(name = "token_confirmacion")
-	private String tokenConfirmacion;
+    @Column(unique = true)
+    private String tokenConfirmacion;  // Token para activar la cuenta
 
-	@Column(name = "confirmado")
-	private Boolean confirmado;
+    @Column(nullable = false)
+    private Boolean activo = false;  // Indica si el usuario confirmó su cuenta
 
-	// Constructor por defecto
-	public Usuario() {
-	}
+    @Column(unique = true)
+    private String tokenRecuperacion;  // Token para restablecer contraseña
 
-	// Constructor con parámetros
-	public Usuario(String nombreCompleto, String correo, String telefono, String codigoPostal, String contrasena) {
-		this.nombreCompleto = nombreCompleto;
-		this.correo = correo;
-		this.telefono = telefono;
-		this.codigoPostal = codigoPostal;
-		this.contrasena = contrasena;
-		this.activo = false;
-		this.confirmado = false;
-	}
+    @Column
+    private Long tokenExpiracion;  // Fecha de expiración del token de recuperación
 
-	// Getters y Setters
-	public String getNombreCompleto() {
-		return nombreCompleto;
-	}
+    @Column(nullable = false)
+    private String rol = "user";  // Campo agregado para el rol
 
-	public void setNombreCompleto(String nombreCompleto) {
-		this.nombreCompleto = nombreCompleto;
-	}
+    @Column
+    private Timestamp fechaRegistro;  // Nuevo campo de fecha de registro
 
-	public String getCorreo() {
-		return correo;
-	}
+    @Column(nullable = true)
+    private String telefono;  // Nuevo campo teléfono
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
+    @Column(nullable = true)
+    private String codigoPostal;  // Nuevo campo código postal
 
-	public String getTelefono() {
-		return telefono;
-	}
+    // Constructor vacío
+    public Usuario() {}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
+    // Constructor con parámetros
+    public Usuario(String correo, String nombreCompleto, String contrasena, String tokenConfirmacion, Boolean activo, String tokenRecuperacion, Long tokenExpiracion, String rol, Timestamp fechaRegistro, String telefono, String codigoPostal) {
+        this.correo = correo;
+        this.nombreCompleto = nombreCompleto;
+        this.contrasena = contrasena;
+        this.tokenConfirmacion = tokenConfirmacion;
+        this.activo = activo;
+        this.tokenRecuperacion = tokenRecuperacion;
+        this.tokenExpiracion = tokenExpiracion;
+        this.rol = rol;
+        this.fechaRegistro = fechaRegistro;
+        this.telefono = telefono;
+        this.codigoPostal = codigoPostal;
+    }
 
-	public String getCodigoPostal() {
-		return codigoPostal;
-	}
+    // Getters y Setters
+    public Long getId() {
+        return id;
+    }
 
-	public void setCodigoPostal(String codigoPostal) {
-		this.codigoPostal = codigoPostal;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getContrasena() {
-		return contrasena;
-	}
+    public String getCorreo() {
+        return correo;
+    }
 
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
 
-	public String getTokenRecuperacion() {
-		return tokenRecuperacion;
-	}
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
 
-	public void setTokenRecuperacion(String tokenRecuperacion) {
-		this.tokenRecuperacion = tokenRecuperacion;
-	}
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
 
-	public long getTokenExpiracion() {
-		return tokenExpiracion;
-	}
+    public String getContrasena() {
+        return contrasena;
+    }
 
-	public void setTokenExpiracion(long tokenExpiracion) {
-		this.tokenExpiracion = tokenExpiracion;
-	}
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
 
-	public Boolean getActivo() {
-		return activo;
-	}
+    public String getTokenConfirmacion() {
+        return tokenConfirmacion;
+    }
 
-	public void setActivo(Boolean activo) {
-		this.activo = activo;
-	}
+    public void setTokenConfirmacion(String tokenConfirmacion) {
+        this.tokenConfirmacion = tokenConfirmacion;
+    }
 
-	public String getTokenConfirmacion() {
-		return tokenConfirmacion;
-	}
+    public Boolean isActivo() {
+        return activo;
+    }
 
-	public void setTokenConfirmacion(String tokenConfirmacion) {
-		this.tokenConfirmacion = tokenConfirmacion;
-	}
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
+    }
 
-	public Boolean getConfirmado() {
-		return confirmado;
-	}
+    public String getTokenRecuperacion() {
+        return tokenRecuperacion;
+    }
 
-	public void setConfirmado(Boolean confirmado) {
-		this.confirmado = confirmado;
-	}
+    public void setTokenRecuperacion(String tokenRecuperacion) {
+        this.tokenRecuperacion = tokenRecuperacion;
+    }
+
+    public Long getTokenExpiracion() {
+        return tokenExpiracion;
+    }
+
+    public void setTokenExpiracion(Long tokenExpiracion) {
+        this.tokenExpiracion = tokenExpiracion;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public Timestamp getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Timestamp fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", correo='" + correo + '\'' +
+                ", nombreCompleto='" + nombreCompleto + '\'' +
+                ", contrasena='" + contrasena + '\'' +
+                ", tokenConfirmacion='" + tokenConfirmacion + '\'' +
+                ", activo=" + activo +
+                ", tokenRecuperacion='" + tokenRecuperacion + '\'' +
+                ", tokenExpiracion=" + tokenExpiracion +
+                ", rol='" + rol + '\'' +
+                ", fechaRegistro=" + fechaRegistro +
+                ", telefono='" + telefono + '\'' +
+                ", codigoPostal='" + codigoPostal + '\'' +
+                '}';  // Agregar telefono y codigoPostal en el toString
+    }
 }

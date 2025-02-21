@@ -11,5 +11,6 @@ import com.ticketerra.backend.ticketerra_api_service.modelos.Usuario;
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
     Optional<Usuario> findByCorreo(String correo);
     Optional<Usuario> findByTokenRecuperacion(String token);
+    Optional<Usuario> findByTokenConfirmacion(String tokenConfirmacion);
 
 }

@@ -25,7 +25,7 @@ public class AdminSupremoUsuariosControlador {
     }
 
     // Método para obtener todos los usuarios
-    @GetMapping
+    @GetMapping("/lista")
     public ResponseEntity<List<Usuario>> obtenerUsuarios() {
         List<Usuario> usuarios = usuarioRepositorio.findAll();
         System.out.println("Usuarios obtenidos en la API: " + usuarios);

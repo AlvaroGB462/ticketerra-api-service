@@ -2,6 +2,8 @@ package com.ticketerra.backend.ticketerra_api_service.modelos;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +17,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Long id;
 
     @Column(unique = true, nullable = false)
@@ -42,6 +45,7 @@ public class Usuario {
     private String rol = "user";  // Campo agregado para el rol
 
     @Column
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
     private Timestamp fechaRegistro;  // Nuevo campo de fecha de registro
 
     @Column(nullable = true)

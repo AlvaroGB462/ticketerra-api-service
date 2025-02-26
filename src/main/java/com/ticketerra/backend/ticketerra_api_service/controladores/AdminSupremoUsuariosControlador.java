@@ -24,22 +24,19 @@ public class AdminSupremoUsuariosControlador {
         this.usuarioRepositorio = usuarioRepositorio;
     }
 
-    // Método para obtener todos los usuarios
     @GetMapping("/lista")
     public ResponseEntity<List<Usuario>> obtenerUsuarios() {
         List<Usuario> usuarios = usuarioRepositorio.findAll();
         System.out.println("Usuarios obtenidos en la API: " + usuarios);
-
         if (usuarios.isEmpty()) {
-            return ResponseEntity.noContent().build(); // Si la lista está vacía, respondemos con código 204
+            return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(usuarios); // Si hay usuarios, respondemos con ellos
+        return ResponseEntity.ok(usuarios);
     }
 
-    // Método para eliminar un usuario
     @DeleteMapping("/eliminar")
     public ResponseEntity<String> eliminarUsuario(@RequestParam String correo) {
-        usuarioRepositorio.deleteByCorreo(correo); // Eliminar el usuario por su correo
+        usuarioRepositorio.deleteByCorreo(correo);
         return ResponseEntity.ok("Usuario eliminado correctamente.");
     }
 }

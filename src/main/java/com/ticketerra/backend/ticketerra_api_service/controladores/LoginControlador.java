@@ -3,108 +3,62 @@ package com.ticketerra.backend.ticketerra_api_service.controladores;
 import java.util.Map;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.ticketerra.backend.ticketerra_api_service.modelos.Usuario;
-import com.ticketerra.backend.ticketerra_api_service.repositorio.UsuarioRepositorio;
+import com.ticketerra.backend.ticketerra_api_service.servicios.LoginServicio;
 
 @RestController
 @RequestMapping("/api/usuarios")
 @CrossOrigin(origins = "http://localhost:9094")
 public class LoginControlador {
 
-    @Autowired
-    private UsuarioRepositorio usuarioRepositorio;
+    private static final Logger logger = LoggerFactory.getLogger(LoginControlador.class);
 
-    @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
-        String correo = request.get("correo");
-        Optional<Usuario> usuario = usuarioRepositorio.findByCorreo(correo);
+    @Autowired
+    private LoginServicio loginServicio;
+
+    // Endpoint para obtener un usuario por su correo (solo CRUD)
+    @PostMapping("/obtenerPorCorreo")
+    public ResponseEntity<?> obtenerPorCorreo(@RequestBody Map<String, String> request) {
+        String correo = request.get("correo"); // Obtiene el correo del cuerpo de la solicitud
+        Optional<Usuario> usuario = loginServicio.obtenerPorCorreo(correo); // Busca el usuario en la base de datos
 
         if (usuario.isPresent()) {
-            return ResponseEntity.ok(usuario.get());
+            return ResponseEntity.ok(usuario.get()); // Devuelve el usuario si existe
         } else {
-            return ResponseEntity.status(404).body(Map.of("error", "Usuario no encontrado"));
+            return ResponseEntity.status(404).body(Map.of("error", "Usuario no encontrado")); // Devuelve error 404 si no existe
         }
     }
 
+    // Endpoint para guardar un token de recuperación (solo CRUD)
     @PostMapping("/guardarToken")
     public ResponseEntity<?> guardarToken(@RequestBody Map<String, String> request) {
-        String correo = request.get("correo");
-        String token = request.get("token");
+        String correo = request.get("correo"); // Obtiene el correo del cuerpo de la solicitud
+        String token = request.get("token"); // Obtiene el token del cuerpo de la solicitud
 
-        Optional<Usuario> usuarioOptional = usuarioRepositorio.findByCorreo(correo);
-
-        if (usuarioOptional.isPresent()) {
-            Usuario usuario = usuarioOptional.get();
-            usuario.setTokenRecuperacion(token);
-            usuario.setTokenExpiracion(System.currentTimeMillis() + 3600000);
-
-            usuarioRepositorio.save(usuario);
-            return ResponseEntity.ok(Map.of("mensaje", "Token guardado correctamente."));
-        } else {
-            return ResponseEntity.status(404).body(Map.of("error", "Usuario no encontrado"));
-        }
+        loginServicio.guardarToken(correo, token); // Guarda el token en la base de datos
+        return ResponseEntity.ok(Map.of("mensaje", "Token guardado correctamente.")); // Devuelve un mensaje de éxito
     }
 
-    @PostMapping("/restablecer")
+    // Endpoint para restablecer la contraseña (solo CRUD)
+    @PostMapping("/restablecerContrasena")
     public ResponseEntity<?> restablecerContrasena(@RequestBody Map<String, String> request) {
-        String token = request.get("token");
-        String nuevaContrasena = request.get("nuevaContrasena");
+        String token = request.get("token"); // Obtiene el token del cuerpo de la solicitud
+        String nuevaContrasena = request.get("nuevaContrasena"); // Obtiene la nueva contraseña del cuerpo de la solicitud
 
-        Optional<Usuario> usuarioOptional = usuarioRepositorio.findByTokenRecuperacion(token);
-
-        if (usuarioOptional.isPresent()) {
-            Usuario usuario = usuarioOptional.get();
-
-            if (usuario.getTokenExpiracion() > System.currentTimeMillis()) {
-                usuario.setContrasena(nuevaContrasena);
-                usuario.setTokenRecuperacion(null);
-                usuarioRepositorio.save(usuario);
-                return ResponseEntity.ok(Map.of("mensaje", "Contraseña restablecida exitosamente."));
-            } else {
-                return ResponseEntity.status(400).body(Map.of("error", "Token inválido o expirado."));
-            }
-        } else {
-            return ResponseEntity.status(404).body(Map.of("error", "Token no encontrado."));
-        }
+        loginServicio.restablecerContrasena(token, nuevaContrasena); // Restablece la contraseña en la base de datos
+        return ResponseEntity.ok(Map.of("mensaje", "Contraseña restablecida exitosamente.")); // Devuelve un mensaje de éxito
     }
 
-    @PutMapping("/activar/{correo}")
-    public ResponseEntity<?> activarUsuario(@PathVariable String correo) {
-        Optional<Usuario> usuarioOptional = usuarioRepositorio.findByCorreo(correo);
-
-        if (usuarioOptional.isPresent()) {
-            Usuario usuario = usuarioOptional.get();
-            if (usuario.isActivo()) {
-                return ResponseEntity.status(400).body(Map.of("error", "El usuario ya está activo"));
-            }
-
-            usuario.setActivo(true);
-            usuarioRepositorio.save(usuario);
-            return ResponseEntity.ok("Usuario activado correctamente.");
-        } else {
-            return ResponseEntity.status(404).body(Map.of("error", "Usuario no encontrado"));
-        }
-    }
-
-    @PutMapping("/desactivar/{correo}")
-    public ResponseEntity<?> desactivarUsuario(@PathVariable String correo) {
-        Optional<Usuario> usuarioOptional = usuarioRepositorio.findByCorreo(correo);
-
-        if (usuarioOptional.isPresent()) {
-            Usuario usuario = usuarioOptional.get();
-            if (!usuario.isActivo()) {
-                return ResponseEntity.status(400).body(Map.of("error", "El usuario ya está desactivado"));
-            }
-
-            usuario.setActivo(false);
-            usuarioRepositorio.save(usuario);
-            return ResponseEntity.ok("Usuario desactivado correctamente.");
-        } else {
-            return ResponseEntity.status(404).body(Map.of("error", "Usuario no encontrado"));
-        }
+    // Endpoint para activar o desactivar un usuario (solo CRUD)
+    @PutMapping("/actualizarEstado/{correo}")
+    public ResponseEntity<?> actualizarEstado(@PathVariable String correo, @RequestParam boolean activo) {
+        loginServicio.actualizarEstado(correo, activo); // Actualiza el estado del usuario en la base de datos
+        return ResponseEntity.ok("Estado actualizado correctamente."); // Devuelve un mensaje de éxito
     }
 }

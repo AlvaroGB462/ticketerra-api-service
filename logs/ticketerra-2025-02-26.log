@@ -1,0 +1,63 @@
+2025-02-26 16:43:42 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.859 seconds (process running for 6.364)
+2025-02-26 16:44:08 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.18 seconds (process running for 5.694)
+2025-02-26 16:44:58 [http-nio-8081-exec-1] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: a@gmail.com
+2025-02-26 16:44:58 [http-nio-8081-exec-1] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: a@gmail.com
+2025-02-26 16:51:26 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-26 16:51:26 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-26 16:51:26 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-26 16:51:26 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: a@gmail.com
+2025-02-26 17:05:30 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 1.427 seconds (process running for 1287.591)
+2025-02-26 17:15:11 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 7.174 seconds (process running for 7.665)
+2025-02-26 17:15:42 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-26 17:15:42 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-26 17:15:43 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-26 17:15:43 [http-nio-8081-exec-2] WARN  c.t.b.t.c.LoginControlador - Intento de activación fallido. Usuario ya activo: a@gmail.com
+2025-02-26 17:16:56 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: a@gmail.com
+2025-02-26 17:16:56 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: a@gmail.com
+2025-02-26 17:17:43 [http-nio-8081-exec-4] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:17:43 [http-nio-8081-exec-4] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:18:41 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:18:41 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:18:41 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:18:41 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:20:02 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:20:02 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:21:58 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:21:58 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:21:58 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:21:58 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:24:43 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:24:43 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:24:43 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:24:43 [http-nio-8081-exec-4] WARN  c.t.b.t.c.LoginControlador - Intento de activación fallido. Usuario ya activo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:24:44 [http-nio-8081-exec-5] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=1, correo='a@gmail.com', nombreCompleto='a', contrasena='$2a$10$qLrdMmsBA8ss1PZjkGOvtOKtuc3Wkrc1.7000qwujE4hkPeUWJ9Ca', tokenConfirmacion='f0b5e7fd-f3e1-4e2c-9c7a-0bbd75dd8053', activo=false, tokenRecuperacion='null', tokenExpiracion=null, rol='user', fechaRegistro=2025-02-26 16:44:58.213, telefono='601749444', codigoPostal='41020'}, Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020'}]
+2025-02-26 17:26:59 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:26:59 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:27:21 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-26 17:27:21 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-26 17:27:21 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-26 17:27:21 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: a@gmail.com
+2025-02-26 17:29:01 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: a@gmail.com
+2025-02-26 17:29:01 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: a@gmail.com
+2025-02-26 17:29:10 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:29:10 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:29:10 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:29:10 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:29:10 [http-nio-8081-exec-4] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=1, correo='a@gmail.com', nombreCompleto='a', contrasena='$2a$10$qLrdMmsBA8ss1PZjkGOvtOKtuc3Wkrc1.7000qwujE4hkPeUWJ9Ca', tokenConfirmacion='f0b5e7fd-f3e1-4e2c-9c7a-0bbd75dd8053', activo=false, tokenRecuperacion='null', tokenExpiracion=null, rol='user', fechaRegistro=2025-02-26 16:44:58.213, telefono='601749444', codigoPostal='41020'}, Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020'}]
+2025-02-26 17:29:53 [http-nio-8081-exec-5] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=1, correo='a@gmail.com', nombreCompleto='a', contrasena='$2a$10$qLrdMmsBA8ss1PZjkGOvtOKtuc3Wkrc1.7000qwujE4hkPeUWJ9Ca', tokenConfirmacion='f0b5e7fd-f3e1-4e2c-9c7a-0bbd75dd8053', activo=false, tokenRecuperacion='null', tokenExpiracion=null, rol='user', fechaRegistro=2025-02-26 16:44:58.213, telefono='601749444', codigoPostal='41020'}, Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020'}]
+2025-02-26 17:30:05 [http-nio-8081-exec-6] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuario eliminado con correo: a@gmail.com
+2025-02-26 17:30:07 [http-nio-8081-exec-7] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020'}]
+2025-02-26 17:30:10 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:30:10 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-26 17:30:40 [http-nio-8081-exec-9] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: a@gmail.com
+2025-02-26 17:30:40 [http-nio-8081-exec-9] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: a@gmail.com
+2025-02-26 17:30:48 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-26 17:30:48 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-26 17:30:48 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-26 17:30:48 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: a@gmail.com
+2025-02-26 17:30:59 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: a@gmail.com
+2025-02-26 17:30:59 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: a@gmail.com
+2025-02-26 17:31:05 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intentando guardar token para usuario: a@gmail.com
+2025-02-26 17:31:05 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Token guardado exitosamente para usuario: a@gmail.com
+2025-02-26 17:31:48 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Intentando guardar token para usuario: a@gmail.com
+2025-02-26 17:31:48 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Token guardado exitosamente para usuario: a@gmail.com

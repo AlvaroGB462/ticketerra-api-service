@@ -8,14 +8,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    @Bean
+    @Bean // Define un bean que será gestionado por Spring
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable())
+            .csrf(csrf -> csrf.disable()) // Deshabilita la protección CSRF (Cross-Site Request Forgery)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/usuarios/**").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/api/usuarios/**").permitAll() // Permite acceso público a todas las rutas bajo /api/usuarios
+                .anyRequest().authenticated() // Requiere autenticación para cualquier otra ruta
             );
-        return http.build();
+        return http.build(); // Construye y devuelve la cadena de filtros de seguridad
     }
 }

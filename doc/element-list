@@ -1,0 +1,6 @@
+com.ticketerra.backend.ticketerra_api_service
+com.ticketerra.backend.ticketerra_api_service.config
+com.ticketerra.backend.ticketerra_api_service.controladores
+com.ticketerra.backend.ticketerra_api_service.modelos
+com.ticketerra.backend.ticketerra_api_service.repositorio
+com.ticketerra.backend.ticketerra_api_service.servicios

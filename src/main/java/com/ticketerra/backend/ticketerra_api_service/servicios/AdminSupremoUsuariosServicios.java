@@ -14,19 +14,19 @@ public class AdminSupremoUsuariosServicios {
     @Autowired
     private UsuarioRepositorio usuarioRepositorio;
 
+    // Método para obtener la lista de todos los usuarios
     public List<Usuario> obtenerUsuarios() {
-        List<Usuario> usuarios = usuarioRepositorio.findAll();
-        System.out.println("Usuarios desde la BD: " + usuarios);  // Verifica en la consola
+        List<Usuario> usuarios = usuarioRepositorio.findAll(); // Obtiene todos los usuarios de la base de datos
         return usuarios;
     }
 
-    // Método para eliminar un usuario por correo
+    // Método para eliminar un usuario por su correo
     public void eliminarUsuario(String correo) {
-        Usuario usuario = usuarioRepositorio.findByCorreo(correo).orElse(null); // Buscar el usuario por correo
+        Usuario usuario = usuarioRepositorio.findByCorreo(correo).orElse(null); // Busca el usuario por correo
         if (usuario != null) {
-            usuarioRepositorio.delete(usuario); // Eliminar el usuario
+            usuarioRepositorio.delete(usuario); // Elimina el usuario si existe
         } else {
-            throw new RuntimeException("Usuario no encontrado"); // Si no se encuentra, lanzar excepción
+            throw new RuntimeException("Usuario no encontrado"); // Lanza una excepción si el usuario no existe
         }
     }
 }

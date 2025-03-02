@@ -1,5 +1,7 @@
 package com.ticketerra.backend.ticketerra_api_service.controladores;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,24 +14,31 @@ import com.ticketerra.backend.ticketerra_api_service.servicios.RegistroServicio;
 @RequestMapping("/api/usuarios")
 public class RegistroControlador {
 
+    private static final Logger logger = LoggerFactory.getLogger(RegistroControlador.class);
+
     @Autowired
     private RegistroServicio registroServicio;
 
-    // Registro sin activar al usuario en la base de datos
+    // Endpoint para registrar un nuevo usuario
     @PostMapping("/registro")
     public ResponseEntity<?> registrarUsuario(@RequestBody Usuario usuario) {
-        return registroServicio.registrarUsuario(usuario);  // Solo se guarda el token, no el usuario
+        logger.info("Intentando registrar usuario con correo: {}", usuario.getCorreo());
+        ResponseEntity<?> response = registroServicio.registrarUsuario(usuario); // Llama al servicio para registrar al usuario
+        logger.info("Registro de usuario procesado para: {}", usuario.getCorreo());
+        return response; // Devuelve la respuesta del servicio
     }
 
-    // Buscar usuario por token
+    // Endpoint para buscar un usuario por su token de confirmación
     @GetMapping("/buscar")
     public ResponseEntity<Usuario> buscarPorToken(@RequestParam("token") String token) {
-        return registroServicio.buscarPorToken(token);
+        logger.info("Buscando usuario con token: {}", token);
+        return registroServicio.buscarPorToken(token); // Llama al servicio para buscar el usuario por token
     }
 
-    // Activar usuario después de la confirmación
+    // Endpoint para activar un usuario
     @PostMapping("/activar")
     public ResponseEntity<?> activarUsuario(@RequestBody Usuario usuario) {
-        return registroServicio.activarUsuario(usuario);  // Aquí se guarda el usuario en la base de datos
+        logger.info("Activando usuario con correo: {}", usuario.getCorreo());
+        return registroServicio.activarUsuario(usuario); // Llama al servicio para activar al usuario
     }
 }

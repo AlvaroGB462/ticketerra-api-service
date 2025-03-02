@@ -1,0 +1,82 @@
+2025-02-27 12:33:18 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.637 seconds (process running for 6.111)
+2025-02-27 12:33:37 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 4.768 seconds (process running for 5.233)
+2025-02-27 13:34:44 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.82 seconds (process running for 6.299)
+2025-02-27 13:36:17 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 1.059 seconds (process running for 99.142)
+2025-02-27 13:37:24 [http-nio-8081-exec-1] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: b@gmail.com
+2025-02-27 13:37:24 [http-nio-8081-exec-1] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: b@gmail.com
+2025-02-27 13:49:38 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 0.807 seconds (process running for 900.251)
+2025-02-27 13:49:54 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 0.746 seconds (process running for 916.798)
+2025-02-27 13:50:13 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 0.718 seconds (process running for 935.381)
+2025-02-27 13:52:17 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.53 seconds (process running for 6.021)
+2025-02-27 13:53:38 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 4.7 seconds (process running for 5.215)
+2025-02-27 13:56:27 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:27 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:28 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:28 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:28 [http-nio-8081-exec-5] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=3, correo='a@gmail.com', nombreCompleto='a', contrasena='$2a$10$Cg6bV9G2WzQPXIDn82ZNjO0K7e6ew4l3bR1xN.Mh9NoAnVUcbsiKG', tokenConfirmacion='0b69c677-5270-47f9-a7cb-401008c095b7', activo=false, tokenRecuperacion='0710eab5-9320-4297-b8fe-3005b55ed05b', tokenExpiracion=1740591108343, rol='user', fechaRegistro=2025-02-26 17:30:40.573, telefono='a', codigoPostal='a', fotoPerfil=No}, Usuario{id=4, correo='b@gmail.com', nombreCompleto='b', contrasena='$2a$10$kOBh/umzT9UnOyUrMOP3nuybFQfmI0KrXlpKpBw1pkmo7Kzlxb2LK', tokenConfirmacion='303a0184-1e47-46c8-a2af-a45e63f5db12', activo=false, tokenRecuperacion='null', tokenExpiracion=null, rol='user', fechaRegistro=null, telefono='b', codigoPostal='b', fotoPerfil=No}, Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020', fotoPerfil=No}]
+2025-02-27 13:56:31 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:31 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-27 13:56:36 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 13:56:36 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 13:56:36 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-27 13:56:36 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: a@gmail.com
+2025-02-27 14:00:07 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: b@gmail.com
+2025-02-27 14:00:07 [http-nio-8081-exec-8] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: b@gmail.com
+2025-02-27 14:00:07 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: b@gmail.com
+2025-02-27 14:00:07 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: b@gmail.com
+2025-02-27 14:07:28 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:07:28 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:07:28 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: a@gmail.com
+2025-02-27 14:07:28 [http-nio-8081-exec-2] WARN  c.t.b.t.c.LoginControlador - Intento de activación fallido. Usuario ya activo: a@gmail.com
+2025-02-27 14:07:56 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:07:56 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:07:56 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:07:56 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:07:56 [http-nio-8081-exec-7] INFO  c.t.b.t.c.AdminSupremoUsuariosControlador - Usuarios obtenidos desde la base de datos: [Usuario{id=3, correo='a@gmail.com', nombreCompleto='a', contrasena='$2a$10$Cg6bV9G2WzQPXIDn82ZNjO0K7e6ew4l3bR1xN.Mh9NoAnVUcbsiKG', tokenConfirmacion='0b69c677-5270-47f9-a7cb-401008c095b7', activo=true, tokenRecuperacion='0710eab5-9320-4297-b8fe-3005b55ed05b', tokenExpiracion=1740591108343, rol='user', fechaRegistro=2025-02-26 17:30:40.573, telefono='a', codigoPostal='a', fotoPerfil=No}, Usuario{id=4, correo='b@gmail.com', nombreCompleto='b', contrasena='$2a$10$kOBh/umzT9UnOyUrMOP3nuybFQfmI0KrXlpKpBw1pkmo7Kzlxb2LK', tokenConfirmacion='303a0184-1e47-46c8-a2af-a45e63f5db12', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='user', fechaRegistro=null, telefono='b', codigoPostal='b', fotoPerfil=No}, Usuario{id=2, correo='al.ga.ba.jjgg@gmail.com', nombreCompleto='Alvaro Garcia Barrera', contrasena='$2a$10$d9fZ1p5lweR.Ri0Dv1LbM.6pt9AXui5VtScMJ3KI6Br6tTZxgotvG', tokenConfirmacion='3ca2705e-2d85-4466-9d9d-b8f6d379ddf4', activo=true, tokenRecuperacion='null', tokenExpiracion=null, rol='adminSupremo', fechaRegistro=2025-02-26 17:17:43.179, telefono='601749444', codigoPostal='41020', fotoPerfil=No}]
+2025-02-27 14:13:04 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:13:04 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: al.ga.ba.jjgg@gmail.com
+2025-02-27 14:15:23 [http-nio-8081-exec-9] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: c@gmail.com
+2025-02-27 14:15:23 [http-nio-8081-exec-9] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: c@gmail.com
+2025-02-27 14:15:42 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: c@gmail.com
+2025-02-27 14:15:42 [http-nio-8081-exec-10] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: c@gmail.com
+2025-02-27 14:15:42 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de activación de usuario: c@gmail.com
+2025-02-27 14:15:42 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Usuario activado correctamente: c@gmail.com
+2025-02-27 14:36:18 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 6.484 seconds (process running for 6.957)
+2025-02-27 14:37:44 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:37:45 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:37:45 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:37:45 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:38:00 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:38:00 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:38:01 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:38:01 [http-nio-8081-exec-4] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:38:43 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:38:43 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:38:43 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: a@gmail.com
+2025-02-27 14:38:43 [http-nio-8081-exec-7] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: a@gmail.com
+2025-02-27 14:45:24 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 1.378 seconds (process running for 552.668)
+2025-02-27 14:46:52 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 6.528 seconds (process running for 6.999)
+2025-02-27 14:48:06 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: c@gmail.com
+2025-02-27 14:48:06 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: c@gmail.com
+2025-02-27 14:48:07 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: c@gmail.com
+2025-02-27 14:48:07 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: c@gmail.com
+2025-02-27 14:48:32 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Intento de desactivación de usuario: c@gmail.com
+2025-02-27 14:48:32 [http-nio-8081-exec-5] INFO  c.t.b.t.c.LoginControlador - Usuario desactivado correctamente: c@gmail.com
+2025-02-27 14:54:11 [http-nio-8081-exec-8] INFO  c.t.b.t.c.RegistroControlador - Intentando registrar usuario con correo: d@gmail.com
+2025-02-27 14:54:11 [http-nio-8081-exec-8] INFO  c.t.b.t.c.RegistroControlador - Registro de usuario procesado para: d@gmail.com
+2025-02-27 14:54:29 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 14:54:29 [http-nio-8081-exec-9] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 14:54:29 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 14:54:29 [http-nio-8081-exec-6] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 14:58:32 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 14:58:32 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 14:58:32 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 14:58:32 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 15:18:33 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 1.447 seconds (process running for 1908.477)
+2025-02-27 15:25:10 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 5.17 seconds (process running for 5.643)
+2025-02-27 15:26:20 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 15:26:20 [http-nio-8081-exec-1] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 15:26:20 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Intento de inicio de sesión con correo: d@gmail.com
+2025-02-27 15:26:20 [http-nio-8081-exec-2] INFO  c.t.b.t.c.LoginControlador - Inicio de sesión exitoso para usuario: d@gmail.com
+2025-02-27 15:26:20 [http-nio-8081-exec-3] INFO  c.t.b.t.c.LoginControlador - Foto recuperada para el usuario 6: 23 bytes
+2025-02-27 15:29:20 [restartedMain] INFO  c.t.b.t.TicketerraApiServiceApplication - Started TicketerraApiServiceApplication in 1.145 seconds (process running for 256.332)
